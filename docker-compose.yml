@@ -1,0 +1,6 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: cacau-dourado-mongodb
+    ports:
+      - "27017:27017"
