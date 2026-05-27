@@ -22,6 +22,18 @@ builder.Services.Configure<MongoDbSettings>(options =>
 builder.Services.AddSingleton<CategoriaService>();
 builder.Services.AddSingleton<ProdutoService>();
 
+// ADICIONE ISSO AQUI
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -33,6 +45,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// ADICIONE ISSO AQUI
+app.UseCors("AllowAll");
 
 app.MapControllers();
 
