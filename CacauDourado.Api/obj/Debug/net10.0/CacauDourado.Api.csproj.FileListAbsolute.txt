@@ -38,3 +38,6 @@ C:\Users\giuli\TrabalhoSemestre\CacauDourado.Api\obj\Debug\net10.0\refint\CacauD
 C:\Users\giuli\TrabalhoSemestre\CacauDourado.Api\obj\Debug\net10.0\CacauDourado.Api.pdb
 C:\Users\giuli\TrabalhoSemestre\CacauDourado.Api\obj\Debug\net10.0\CacauDourado.Api.genruntimeconfig.cache
 C:\Users\giuli\TrabalhoSemestre\CacauDourado.Api\obj\Debug\net10.0\ref\CacauDourado.Api.dll
+C:\Users\giuli\TrabalhoSemestre\CacauDourado.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\giuli\TrabalhoSemestre\CacauDourado.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\giuli\TrabalhoSemestre\CacauDourado.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
