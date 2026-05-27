@@ -20,6 +20,7 @@ builder.Services.Configure<MongoDbSettings>(options =>
 });
 
 builder.Services.AddSingleton<CategoriaService>();
+builder.Services.AddSingleton<ProdutoService>();
 
 var app = builder.Build();
 
