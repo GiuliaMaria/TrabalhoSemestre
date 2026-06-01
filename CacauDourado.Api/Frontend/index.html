@@ -8,27 +8,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <img src="logo.jpg" alt="Logo Cacau Dourado" class="logo">
 
     <h1>Cacau Dourado</h1>
 
+    <input
+        type="text"
+        id="pesquisa"
+        placeholder="Pesquisar produtos..."
+        onkeyup="buscarProdutos()"
+    >
+
     <div class="formulario">
-        <input type="text" id="nome" placeholder="Nome do produto">
+
+        <input type="text" id="nome" placeholder="Nome">
 
         <input type="number" id="preco" placeholder="Preço">
 
-        <input type="text" id="categoriaId" placeholder="ID da categoria">
+        <select id="categoriaId">
+    <option value="">
+        Selecione uma categoria
+    </option>
+</select>
+
+        <input type="text" id="descricao" placeholder="Descrição">
+
+        <input type="text" id="imagemUrl" placeholder="URL da imagem">
+
+        <label class="checkbox">
+            <input type="checkbox" id="destaque">
+            Produto destaque
+        </label>
 
         <button onclick="cadastrarProduto()">
-            Cadastrar
+            Cadastrar Produto
         </button>
+
     </div>
+
+    <h2>Categorias</h2>
+
+    <div id="listaCategorias"></div>
 
     <h2>Produtos</h2>
 
     <div id="listaProdutos"></div>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
