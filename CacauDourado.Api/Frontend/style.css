@@ -43,6 +43,7 @@ h1 {
 }
 
 h2 {
+    text-align: center;
     margin-top: 40px;
     margin-bottom: 20px;
 
@@ -171,10 +172,10 @@ button:hover {
 }
 
 #pesquisa {
+    display: block;
+    margin: 20px auto;
     width: 350px;
-    margin-bottom: 25px;
 }
-
 .imagem-produto {
     width: 100%;
     height: 180px;
@@ -212,3 +213,106 @@ button:hover {
     display: flex;
     gap: 10px;
 }
+
+.detalhes {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.card-detalhe {
+    background-color: #111;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.imagem-detalhe {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card {
+    cursor: pointer;
+}
+.detalhes-produto {
+    display: none;
+    margin-top: 10px;
+}
+
+.card.ativo .detalhes-produto {
+    display: block;
+}
+
+.detalhes-produto {
+    display: none;
+    margin-top: 10px;
+}
+
+.card.ativo .detalhes-produto {
+    display: block;
+}
+
+.card.ativo .detalhes-produto {
+    display: block;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.card-cadastro {
+
+    background-color: #111;
+
+    border: 2px solid #d4af37;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    width: 350px;
+
+    cursor: pointer;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 0 15px rgba(212,175,55,0.2);
+}
+
+.cabecalho-cadastro {
+
+    text-align: center;
+}
+
+.formulario-oculto {
+
+    display: none;
+
+    margin-top: 20px;
+}
+
+.formulario-oculto.aberto {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+.menu {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+#secaoCadastro {
+
+    display: none;
+}cd

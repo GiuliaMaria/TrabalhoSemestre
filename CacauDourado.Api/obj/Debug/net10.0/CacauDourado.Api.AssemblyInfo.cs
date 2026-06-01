@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CacauDourado.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a15cffee53369b1edbdb66e426c14b83b2ab701")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ced6b5e4508e07bbfdab15b57bbe62743895a48")]
 [assembly: System.Reflection.AssemblyProductAttribute("CacauDourado.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CacauDourado.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

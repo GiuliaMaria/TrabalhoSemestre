@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cacau Dourado</title>
 
+    <div class="menu">
+
+    <button onclick="mostrarCatalogo()">
+        📋 Catálogo
+    </button>
+
+    <button onclick="mostrarCadastro()">
+        ➕ Cadastro
+    </button>
+
+</div>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,40 +25,67 @@
 
     <h1>Cacau Dourado</h1>
 
-    <input
-        type="text"
-        id="pesquisa"
-        placeholder="Pesquisar produtos..."
-        onkeyup="buscarProdutos()"
-    >
+    
+<div id="secaoCadastro">
+ <div class="card-cadastro">
 
-    <div class="formulario">
+    <div
+        class="cabecalho-cadastro"
+        onclick="toggleFormulario()"
+    >
+        <h3>➕ Novo Produto</h3>
+    </div>
+
+
+
+    <div id="formularioCadastro" class="formulario-oculto">
 
         <input type="text" id="nome" placeholder="Nome">
 
         <input type="number" id="preco" placeholder="Preço">
 
         <select id="categoriaId">
-    <option value="">
-        Selecione uma categoria
-    </option>
-</select>
+            <option value="">
+                Selecione uma categoria
+            </option>
+        </select>
 
-        <input type="text" id="descricao" placeholder="Descrição">
+        <input
+            type="text"
+            id="descricao"
+            placeholder="Descrição"
+        >
 
-        <input type="text" id="imagemUrl" placeholder="URL da imagem">
+        <input
+            type="text"
+            id="imagemUrl"
+            placeholder="URL da imagem"
+        >
 
         <label class="checkbox">
             <input type="checkbox" id="destaque">
             Produto destaque
         </label>
 
-        <button onclick="cadastrarProduto()">
+        <button
+            onclick="event.stopPropagation(); cadastrarProduto();"
+        >
             Cadastrar Produto
         </button>
 
     </div>
 
+</div>
+</div>
+
+<div id="secaoCatalogo">
+
+    <input
+        type="text"
+        id="pesquisa"
+        placeholder="Pesquisar produtos..."
+        onkeyup="buscarProdutos()"
+    >
     <h2>Categorias</h2>
 
     <div id="listaCategorias"></div>
@@ -54,6 +93,8 @@
     <h2>Produtos</h2>
 
     <div id="listaProdutos"></div>
+
+    </div>
 
     <script src="script.js"></script>
 

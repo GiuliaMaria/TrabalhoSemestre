@@ -113,35 +113,50 @@ function buscarProdutos() {
                 c => c.id === produto.categoriaId
             );
 
-        lista.innerHTML += `
-            <div class="card">
+        const card =
+            document.createElement("div");
 
-                <img
-                    src="${produto.imagemUrl || 'Imagens/produto-sem-foto.jpg'}"
-                    class="imagem-produto"
-                >
+        card.className = "card";
 
-                ${
-                    produto.destaque
-                    ? '<span class="badge">DESTAQUE</span>'
-                    : ''
-                }
+        card.onclick = () => {
+            card.classList.toggle("ativo");
+        };
 
-                <h3>${produto.nome}</h3>
+        card.innerHTML = `
 
-                <p>${produto.descricao || ''}</p>
+            <img
+                src="${produto.imagemUrl || 'imagens/produto-sem-foto.jpg'}"
+                class="imagem-produto"
+            >
 
-                <p class="preco">
+            <h3>${produto.nome}</h3>
+
+            <div class="detalhes-produto">
+
+                <p>
+                    <strong>Preço:</strong>
                     R$ ${produto.preco}
                 </p>
 
                 <p>
-                    Categoria:
+                    <strong>Categoria:</strong>
                     ${categoria ? categoria.nome : 'Sem categoria'}
                 </p>
 
+                <p>
+                    ${produto.descricao || ''}
+                </p>
+
+                ${
+                    produto.destaque
+                    ? '<span class="badge">⭐ Destaque</span>'
+                    : ''
+                }
+
             </div>
         `;
+
+        lista.appendChild(card);
     });
 }
 
@@ -185,7 +200,41 @@ async function cadastrarProduto() {
     await carregarCategoriasSelect();
 }
 
+function toggleFormulario() {
+
+    const formulario =
+        document.getElementById(
+            "formularioCadastro"
+        );
+
+    formulario.classList.toggle("aberto");
+}
+
+function mostrarCatalogo() {
+
+    document.getElementById(
+        "secaoCatalogo"
+    ).style.display = "block";
+
+    document.getElementById(
+        "secaoCadastro"
+    ).style.display = "none";
+}
+
+function mostrarCadastro() {
+
+    document.getElementById(
+        "secaoCatalogo"
+    ).style.display = "none";
+
+    document.getElementById(
+        "secaoCadastro"
+    ).style.display = "block";
+}
+
+
 window.onload = async () => {
     await carregarCategoriasSelect();
     await carregarDados();
+    mostrarCatalogo();
 };
